@@ -1,0 +1,128 @@
+
+php
+Copy code
+    h1, h2 {
+        color: #0077C0;
+        text-align: center;
+    }
+
+    p {
+        margin: 20px;
+        line-height: 1.5;
+    }
+
+    .green {
+        color: #50C878;
+    }
+
+    .blue {
+        color: #0077C0;
+    }
+    
+    #department-information {
+        display: none;
+    }
+    
+    .info {
+        margin-top: 20px;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const departmentDropdown = document.querySelector("#department-dropdown");
+        const departmentInfo = document.querySelector("#department-information");
+        const allDepartmentInfo = document.querySelectorAll(".info");
+
+        departmentDropdown.addEventListener("change", function() {
+            allDepartmentInfo.forEach(info => info.style.display = "none");
+
+            const selectedDepartment = document.querySelector(`#${this.value}-info`);
+            if (selectedDepartment) {
+                selectedDepartment.style.display = "block";
+                departmentInfo.style.display = "block";
+            } else {
+                departmentInfo.style.display = "none";
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <header>
+        <h1>LASR</h1>
+    </header>
+    <main>
+        <h2>Welcome to the official LASR website!</h2>
+        <p>This website is dedicated to everything LASR related. Below we will provide short information on which departments you can join.</p>
+    </main>
+    <main>
+        <p>Welcome to the official website for the LASR roleplay community!</p>
+        <select id="department-dropdown">
+            <option value="">Select a department</option>
+            <option value="CIA">Central Intelligence Agency (C.I.A)</option>
+            <option value="FBI">Federal Bureau of Investigation (FBI)</option>
+            <option value="ATF">Bureau of Alcohol, Tobacco, Firearms, and Explosives (ATF)</option>
+            <option value="LAPD-SWAT">Los Angeles Police Department (LAPD) SWAT</option>
+            <option value="USMS">United States Marshals Service (USMS)</option>
+            <option value="LAPD">Los Angeles Police Department (LAPD)</option>
+            <option value="LAPR">Los Angeles Park Ranger (LAPR)</option>
+            <option value="LASP">Los Angeles State Patrol (LASP)</option>
+            <option value="USAR">United States Army Rangers, a.k.a 75th Ranger Regiment</option>
+            <option value="LACS">Los Angeles County Sheriff's Department (LACS)</option>
+            <option value="SADOT">Southern California Department of Transportation (SADOT)</option>
+            <option value="Fire-EMS">Fire Services &amp; EMS</option>
+        </select>
+
+    <!-- Department information displayed when selecting the dropdown -->
+<div id="department-information">
+    <h2>Department Information</h2>
+    <div id="CIA-info" class="info">
+        <h3>Centralphp
+Copy code Intelligence Agency (C.I.A)</h3>
+        <p>The Central Intelligence Agency (C.I.A) is a civilian foreign intelligence service of the United States federal government, responsible for providing national security intelligence to senior U.S. policymakers. In roleplaying communities, there are often two types of C.I.A agents: tactical agents who are trained in special operations and intelligence gathering, and normal agents who work in intelligence analysis and support.</p>
+    </div>
+    <div id="FBI-info" class="info">
+        <h3>Federal Bureau of Investigation (FBI)</h3>
+        <p>The Federal Bureau of Investigation (FBI) is a domestic intelligence and security service of the United States, tasked with conducting criminal investigations and gathering intelligence. Within the FBI, there are two main types of roles: Hostage Rescue Team (HRT) agents who are specially trained in hostage situations and other high-risk scenarios, and field agents who investigate criminal activity.</p>
+    </div>
+    <div id="ATF-info" class="info">
+        <h3>Bureau of Alcohol, Tobacco, Firearms, and Explosives (ATF)</h3>
+        <p>The Bureau of Alcohol, Tobacco, Firearms, and Explosives (ATF) is a federal law enforcement organization within the United States Department of Justice. The agency is responsible for enforcing federal laws related to firearms, explosives, arson, and alcohol and tobacco products.</p>
+    </div>
+    <div id="LAPD-SWAT-info" class="info">
+        <h3>Los Angeles Police Department (LAPD) SWAT</h3>
+        <p>The LAPD S.W.A.T team is a specialized tactical unit within the LAPD, trained to handle high-risk situations such as hostage rescues, barricaded suspects, and active shooter scenarios.</p>
+    </div>
+    <div id="USMS-info" class="info">
+        <h3>United States Marshals Service (USMS)</h3>
+        <p>The United States Marshals Service (USMS) is a federal law enforcement agency within the U.S. Department of Justice, responsible for providing security for federal courts and transporting federal prisoners. USMS also has the authority to apprehend fugitives.</p>
+    </div>
+    <div id="LAPD-info" class="info">
+        <h3>Los Angeles Police Department (LAPD)</h3>
+        <p>The LAPD is the primary law enforcement agency for the city of Los Angeles. It has a wide range of roles available, from patrol officers to detectives, specialized units such as the bomb squad, and even air support units.</p>
+    </div>
+    <div id="LAPR-info" class="info">
+        <h3>Los Angeles Park Ranger (LAPR)</h3>
+        <p>The Los Angeles Park Ranger (LAPR) is a specialized unit within the LAPD responsible for enforcing park rules and regulations, protecting wildlife, and providing public safety services in city parks and other outdoor areas.</p>
+    </div>
+    <div id="LASP-info" class="info">
+        <h3>Los Angeles State Patrol (LASP)</h3>
+        <p>The Los Angeles State Patrol (LASP) is a state law enforcement agency responsible for patrolling highways and enforcing traffic laws within the state of California. It is similar to the California Highway Patrol.</p>
+    </div>
+    <div id="USAR-info" class="info">
+        <h3>United States Army Rangers, a.k.a 75th Ranger Regiment</h3>
+        <p>The United States Army Rangers, also known as the 75th Ranger Regiment, is a special operations force of the U.S. Army. Rangers are trained in special operations, air assault, and direct action missions.</p>
+    </div>
+    <div id="LACS-info" class="info">
+        <h3>Los Angeles County Sheriff's Department (LACS)</h3>
+        <p>The Los Angeles County Sheriff's Department (LACS) is the primary law enforcement agency for Los Angeles County. It has a wide range of roles available, from patrol officers to detectives, specialized units such as the SWAT team, and even air support units.</p>
+    </div>
+    <div id="SADOT-info" class="info">
+        <h3>Southern California Department of Transportation (SADOT)</h3>
+        <p>Placeholder</p>
+    </div>
+    <div id="Fire-EMS-info" class="info">
+        <h3>Fire Services &amp; EMS</h3>
+        <p>Placeholder</p>
+    </div>
+</div>
